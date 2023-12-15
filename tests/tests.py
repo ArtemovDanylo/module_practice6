@@ -53,16 +53,16 @@ class TestingCalculator(unittest.TestCase):
         result = my_calculator.pow()
         self.assertEqual(result, 0.25)
 
-    def test_pow_positive(self):
+    def test_random_positive(self):
         a = 2
         b = 20
         my_calculator = Calculator(0, 0)
-        result = my_calculator.static_random_generate(a, b)
-        self.assertEqual(a <= result <= b)
+        result = my_calculator.random_generate(a, b)
+        self.assertTrue(a <= result <= b)
 
-    def test_pow_positive(self):
+    def test_random_negative(self):
         a = -12
         b = 10
         my_calculator = Calculator(0, 0)
-        result = my_calculator.static_random_generate(a, b)
-        self.assertEqual(a <= result <= b)
+        result = my_calculator.random_generate(a, b)
+        self.assertTrue(a <= result <= b)
