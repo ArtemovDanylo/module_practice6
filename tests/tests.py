@@ -22,3 +22,13 @@ class TestingCalculator(unittest.TestCase):
         my_calculator = Calculator(-12, 5)
         result = my_calculator.subtraction()
         self.assertEqual(result, -17)
+
+    def test_multiplication_positive(self):
+        my_calculator = Calculator(12, 5)
+        result = my_calculator.multiplication()
+        self.assertEqual(result, 60)
+
+    def test_multiplication_negative(self):
+        my_calculator = Calculator(-5, 5)
+        result = my_calculator.multiplication()
+        self.assertEqual(result, -25)
