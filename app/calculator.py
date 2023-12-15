@@ -20,7 +20,7 @@ class Calculator():
         if self.number2 != 0:
             return self.number1 / self.number2
         else:
-            print("Division be zero is not allowed")
+            print("Division by zero is not allowed")
 
     def pow(self):
         return math.pow(self.number1, self.number2)

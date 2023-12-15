@@ -32,3 +32,13 @@ class TestingCalculator(unittest.TestCase):
         my_calculator = Calculator(-5, 5)
         result = my_calculator.multiplication()
         self.assertEqual(result, -25)
+
+    def test_division(self):
+        my_calculator = Calculator(25, 5)
+        result = my_calculator.division()
+        self.assertEqual(result, 5)
+
+    def test_division_by_zero(self):
+        my_calculator = Calculator(25, 0)
+        result = my_calculator.division()
+        self.assertEqual(result, "Division by zero is not allowed")
